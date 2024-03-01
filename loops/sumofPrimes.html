@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var start = +prompt("Enter starting number : ");
+            var end = +prompt("Enter the ending number : ");
+            var sum=0;
+            var count;
+            for(var i=start;i<=end;i++) {
+                for(var j=1;j<=start;j++) {
+                    if(start%j==0) {
+                        count=count+1;
+                    }
+                } 
+            var num=start;
+            if(count==2) {
+                sum=sum+num; 
+                }  
+                num=num+1;   
+            }
+            
+            console.log(sum);
+
+        </script>
+    </body>
+</html>

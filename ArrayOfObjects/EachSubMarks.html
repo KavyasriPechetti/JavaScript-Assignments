@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var s=prompt();
+            var marks={
+                "maths" : 34,
+                "english" : 56,
+                "science" : 32,
+                "hindi" : 75,
+                "social science" : 65
+            };
+            for(var subject in marks) {
+                if(subject==s) {
+                    s=subject;
+                }
+            }
+            if(marks[s]>=35) {
+                console.log("The marks in "+s+ " are " +marks[s]+ " and he passed in the subject.");
+            }
+            else {
+                console.log("The marks in "+s+ " are " +marks[s]+ " and he failed in the subject.");
+            }
+        </script>
+    </body>
+</html>

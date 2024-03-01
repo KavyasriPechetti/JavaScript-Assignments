@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var marks={
+                "maths" : 34,
+                "english" : 56,
+                "science" : 32,
+                "hindi" : 75,
+                "social science" : 65
+            };
+            var count=0;
+            for(var subject in marks) {
+                if(marks[subject]>35) {
+                    count=count+1;
+                }
+            }
+            if(count!=marks.length) {
+                console.log("The student did not passed in all subjects.");
+            }
+            else {
+                console.log("The student passed in all subjects.");
+            }
+           
+        </script>
+    </body>
+</html>

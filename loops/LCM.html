@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+           var num1=+prompt("Enter first number : ");
+           var num2=+prompt("Enter second number : ");
+           var large;
+           var small;
+           if(num1>num2) {
+            large=num1;
+            small=num2;
+           }
+           else {
+            large=num2;
+            small=num1;
+           }
+           var i=large;
+           while(large%small != 0) {
+            large=large+i;
+           }
+           console.log(large);
+        </script>
+    </body>
+</html>

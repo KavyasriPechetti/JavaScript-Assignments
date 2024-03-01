@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="userForm" onsubmit="event.preventDefault()">
+        <div>
+            <label>Firstname:</label>
+            <input type="text" name="firstname">
+        </div>
+
+        <div>
+            <label>Lastname:</label>
+            <input type="text" name="lastname">
+        </div>
+
+        <div>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male"><label>Male</label><br>
+            <input type="radio" name="gender" value="Female"><label>Female</label><br>
+            <input type="radio" name="gender" value="Others"><label>Others</label><br>
+
+        </div>
+
+        <div>
+            <label>Languages:</label>
+            <input type="checkbox" name="languages" value="English"><label>English</label><br>
+            <input type="checkbox"  name="languages" value="Hindi"><label>Hindi</label><br>
+            <input type="checkbox"  name="languages" value="Telugu"><label>Telugu</label><br>
+            <input type="checkbox"  name="languages" value="Spanish"><label>Spanish</label><br>
+            <input type="checkbox"  name="languages" value="Korean"><label>Korean</label><br>
+        </div>
+
+        <button onclick="save()">Save</button>
+    </form>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Gernder</th>
+                <th>Languages</th>
+
+            </tr>
+        </thead>
+        <tbody id="tb"></tbody>
+    </table>
+
+    <script>
+        var tbd=document.getElementById("tb");
+        var users=[];
+        function save() {
+        
+            // console.dir(userForm.firstname.value);
+            // console.dir(userForm.lastname.value);
+            // console.dir(userForm.gender.value);
+            // console.dir(userForm.languages.value);
+           // console.log(userForm.languages);
+           var lang=[];
+           for(var i=0;i<=userForm.languages.length-1;i++) {
+
+           // console.log(userForm.languages[i].checked);
+                if(userForm.languages[i].checked==true) {
+                    lang.push(userForm.languages[i].value);
+                }
+           }
+           var userObj={
+            fname:userForm.firstname.value,
+            lname:userForm.lastname.value,
+            gender:userForm.gender.value,
+            languages:lang
+           }
+           //console.log(userObj);
+           users.push(userObj);
+           genTable(users);
+        }
+
+        function genTable(arr) {
+            tbd.innerHTML="";
+           arr.forEach(function(user) {
+            var newtr=document.createElement("tr");
+            var td1=document.createElement("td");
+            td1.innerHTML=user.fname;
+            newtr.appendChild(td1);
+
+            var td2=document.createElement("td");
+            td2.innerHTML=user.lname;
+            newtr.appendChild(td2);
+
+
+            var td3=document.createElement("td");
+            td3.innerHTML=user.gender;
+            newtr.appendChild(td3);
+
+            var td4=document.createElement("td");
+            td4.innerHTML=user.languages;
+            newtr.appendChild(td4);
+
+            tbd.appendChild(newtr);
+           })
+        }
+    </script>
+</body>
+</html>

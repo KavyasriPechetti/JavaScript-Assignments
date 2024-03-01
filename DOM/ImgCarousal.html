@@ -1,0 +1,56 @@
+<html>
+
+<head>
+
+    <style>
+        img {
+            width: 350px;
+            height: 100px;
+            border: 2px dashed;
+            border-radius: 70%;
+            margin-top: 220px;
+            margin-left: 200px;
+        }
+
+        body {
+            text-align: center;
+            background-image: url("https://pics.craiyon.com/2023-10-26/7ce97018ba5743f3ab110dda611f7e5b.webp");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img onclick="abc()" id="d1">
+    <script>
+        var image = document.getElementById("d1");
+
+
+        var ar = ["https://previews.123rf.com/images/vvvita/vvvita1601/vvvita160100077/49939062-flowers-on-the-forest-edge.jpg",
+            "https://images.freeimages.com/variants/59tZ1h89y8fuRnBcqUuUjEWo/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500",
+            "https://images.freeimages.com/image/previews/377/family-love-set-5690782.jpg?fmt=webp&w=500",
+            "https://images.freeimages.com/images/large-previews/92c/cube-x-plosion-1170600.jpg?fmt=webp&w=500",
+            "https://images.freeimages.com/images/large-previews/65a/to-infinity-1153771.jpg?fmt=webp&w=500",
+            "https://images.freeimages.com/images/large-previews/aaf/our-precious-baby-girl-1430727.jpg?fmt=webp&w=500"];
+
+        var i = 0;
+        image.src = ar[i];
+        function abc() {
+            if (i == ar.length - 1) {
+                i = 0;
+                image.src = ar[i];
+            } else {
+                i++;
+                image.src = ar[i];
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

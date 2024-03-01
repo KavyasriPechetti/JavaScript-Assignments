@@ -1,0 +1,145 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var people = [
+                            {
+                            "firstname": "praveen",
+                            "lastname": "gubbala",
+                            "age": 36,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 10000
+                            },
+                            {
+                            "firstname": "srikanth",
+                            "lastname": "gubbala",
+                            "age": 32,
+                            "gender": "male",
+                            "city": "bengaluru",
+                            "salary": 20000
+                            },
+                            {
+                            "firstname": "pradeep",
+                            "lastname": "reddy",
+                            "age": 21,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 25000
+                            },
+                            {
+                            "firstname": "mounika",
+                            "lastname": "mudiraj",
+                            "age": 20,
+                            "gender": "female",
+                            "city": "nalgonda",
+                            "salary": 30000
+                            },
+                            {
+                            "firstname": "nikhil",
+                            "lastname": "m",
+                            "age": 22,
+                            "gender": "male",
+                            "city": "guntur",
+                            "salary": 2000
+                            },
+                            {
+                            "firstname": "riya",
+                            "lastname": "bhadouria",
+                            "age": 14,
+                            "gender": "female",
+                            "city": "indore",
+                            "salary": 40000
+                            }
+                            ];
+
+          //  Print all the firstnames.
+
+           /*  for(var i=0;i<=people.length-1;i++) {
+                console.log(people[i]['firstname']);
+            }*/
+//------------------------------------------------------------
+            //Print all the full names.
+
+            /*for(var i=0; i<=people.length-1;i++) {
+                console.log(people[i]['firstname']+ " " + people[i]['lastname']);
+            }*/
+
+//--------------------------------------------------------------
+            //Print only those names whose age is more than 25.
+
+            /*for(var i=0;i<=people.length-1;i++) {
+                if(people[i]['age'] > 25) {
+                    console.log(people[i]['firstname']+ " "+ people[i]['lastname']);
+                }
+            }*/
+//-----------------------------------------------------
+            //Print all female names.
+
+            /*for(var i=0;i<=people.length-1;i++) {
+                if(people[i]['gender']=='female') {
+                    console.log(people[i]['firstname']+ " "+ people[i]['lastname']);
+                }
+            }*/
+//-----------------------------------------------------------------
+            //Print only those names whose salary is more than 25000 and increase their salaries by 15%.
+
+            /*var sal=0;
+            for(var i=0;i<=people.length-1;i++) {
+                if(people[i]['salary']>25000) {
+                    sal=(15/100)*people[i]['salary']+people[i]['salary'];
+                    console.log(people[i]['firstname']+" "+people[i]['lastname']+ " and after salary increase "+ sal);
+                }
+            }*/
+//---------------------------------------------------------
+
+            //Using prompt, print only those names whose city is "hyd".
+
+            /*var ct=prompt();
+            for(var i=0;i<=people.length-1;i++) {
+                if(people[i]['city']==ct) {
+                    console.log(people[i]['firstname']+ " "+people[i]['lastname']);
+                }
+            }*/
+//------------------------------------------------------------
+            //Print the total salary of all the people.
+
+            /*var total=0;
+            for(var i=0;i<=people.length-1;i++) {
+                total=total+people[i]['salary'];
+            }
+            console.log("The total salary of all people is "+total);
+            */
+//---------------------------------------------------------------
+            //Print all the firstnames whose salary is more than 25000.
+
+            /*for(var i=0;i<=people.length-1;i++) {
+                if(people[i]['salary'] > 25000) {
+                    console.log(people[i]['firstname']);
+                }
+            }*/
+
+//----------------------------------------------------------------
+
+    //Print all the fullnames in the alphabetical order.
+
+           /* var names=[];
+            for(var i=0;i<=people.length-1;i++) {
+                var name=people[i]['firstname']+ " "+people[i]['lastname'];
+                names.push(name);
+                names.sort();
+            }
+            for(var j=0;j<=names.length-1;j++) {
+                console.log(names[j]);
+            }*/
+//--------------------------------------------------------------------
+
+     //Print all the fullnames in the increasing order of their age.
+
+                        
+                
+
+            
+        </script>
+    </body>
+</html>

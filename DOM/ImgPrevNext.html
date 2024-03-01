@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+<center>
+    <h1 style="color: blue;">Image carousel</h1>
+    <img id="d1" src="" width="200px" height="150px">
+    
+    <br><br>
+    <button onclick="pre()"  style="margin-right: 70px; background-color: pink;" >Previous</button>
+    <button onclick="next()"  style="margin-left: 70px; background-color: pink;">Next</button>
+</center>
+
+        <script>
+            var z=document.getElementById("d1");
+
+           
+            var ar=["https://hips.hearstapps.com/hmg-prod/images/close-up-of-tulips-blooming-in-field-royalty-free-image-1584131603.jpg?crop=0.630xw:1.00xh;0.186xw,0&resize=1200:*",
+
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBtg-Ku-ZPP-9yte6LAMV3UQNwkodfmxwWuQ&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40wESinElKg6ho1rndT1c9q3WvH9PboA6tKczA1fIV8pstFbja9yFWaL6Q_OYOmS2ABM&usqp=CAU",
+            "https://images.freeimages.com/image/previews/377/family-love-set-5690782.jpg?fmt=webp&w=500",
+             "https://images.freeimages.com/images/large-previews/92c/cube-x-plosion-1170600.jpg?fmt=webp&w=500"];
+
+           
+                 var i=0;
+                 z.src=ar[i];
+                
+                function next() {                      
+                    if(i==ar.length-1) {
+                        i=0;
+                        z.src=ar[i];
+                    } else {
+                        i++;
+                        z.src=ar[i];
+                    }
+         }   
+                 
+         function pre() {
+            if(i==0) {
+                i=ar.length-1;
+                z.src=ar[i];
+            } else {
+                i--;
+                z.src=ar[i];
+            }
+            
+         }   
+
+        </script>
+    </body>
+</html>

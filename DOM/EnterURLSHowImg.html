@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+                background:linear-gradient(rgb(112, 25, 112),rgb(22, 21, 21));
+            }
+            #b1 {
+                background-color: darkgoldenrod;
+            }
+            div {
+                margin: 30px;
+                
+            }
+            img {
+                margin: 30px;
+                width: 200px;
+                height: 200px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Show Images using URL</h1><br>
+        <label>Enter image URL:</label>
+        <input type="url" id="i">
+<br><br><br>
+        <button id="b1" onclick="abc()">Add Image</button>
+
+        <div id="diving"></div>
+        <script>
+            var x=document.getElementById("i");
+            var y=document.getElementById("b1");
+            var img=document.getElementById("diving")
+
+             function abc() {
+                var newimg=document.createElement("img");
+                newimg.src=x.value;
+                img.appendChild(newimg);
+             }
+        </script>
+    </body>
+</html>

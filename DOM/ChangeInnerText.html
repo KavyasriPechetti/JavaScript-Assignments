@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+        <body>
+            <h1 id='x'>Hello World</h1>
+            <script>
+                var textpart = document.getElementById('x');
+                console.log(textpart.innerHTML);
+                //var a=document.body.firstElementChild.innerHTML;
+                //console.log(a)
+                //data type
+                console.log(typeof(textpart.innerHTML));
+
+                //uppercase
+                console.log((textpart.innerHTML).toUpperCase());
+
+                //change the h1 text to "welcome to edupoly"
+                var person= {
+                    firstname:"kavya",
+                    lastname:"Pechetti"
+                }
+                person.lastname="sri";
+                console.log(person.lastname);
+                console.log(person);
+                
+                //in the object form
+
+                console.dir(textpart); //textpart is the object name
+
+                textpart.innerHTML="Welcome to Edupoly";
+                
+            </script>
+       </body>
+</html>

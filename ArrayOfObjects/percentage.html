@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var marks={
+                "maths" : 34,
+                "english" : 56,
+                "science" : 32,
+                "hindi" : 75,
+                "social science" : 65
+            };
+            var count=0;
+            var num;
+            var totalMarks=0;
+            for(var subject in marks) {
+                totalMarks=totalMarks+marks[subject];
+                count=count+1;
+            }
+            num=totalMarks;
+            var percentage = (num/(count*100))*100;
+            console.log(parseInt(percentage)+ "%");
+
+            
+            
+        </script>
+    </body>
+</html>

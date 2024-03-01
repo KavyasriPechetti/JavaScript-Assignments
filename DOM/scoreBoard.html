@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <h1>India Score:<span id="d1"></span></h1>
+        <button onclick="abc()">Score</button>
+
+        <h1>Pakistan Score:<span id="d2"></span></h1>
+        <button onclick="xyz()">Score</button>
+
+        <script>
+            var score=0;
+            var score1=0
+            document.getElementById("d1").innerHTML=score;
+            document.getElementById("d2").innerHTML=score;
+
+           function abc() {
+            score++;
+            document.getElementById("d1").innerHTML=score;
+
+           }
+
+           function xyz() {
+            score1++;
+            document.getElementById("d2").innerHTML=score1;
+           }
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <h1 style="text-align: center;">Like and Dislike Buttons</h1>
+        <center>
+            <button onclick="abc()" style="background-color: aqua; border:2px solid; border-color: bisque; margin: 10px; height: 40px; width: 50px; border-radius: 10%;">Like </button><span id="d1"></span> 
+<br>
+
+            <button onclick="xyz()" style="background-color: red; color: white; border:2px solid; border-color: bisque; margin: 10px; height: 40px; width: 70px; border-radius: 10%;">Dislike</button><span id="d2"></span>
+        </center>
+        
+        <script>
+            var a=0;
+            var b=0;
+            document.getElementById("d1").innerHTML=a;
+            document.getElementById("d2").innerHTML=b;
+            
+
+            function abc() {
+                a++;
+                document.getElementById("d1").innerHTML=a;
+            }
+
+            function xyz() {
+                b++;
+                document.getElementById("d2").innerHTML=b;
+            }
+
+            
+
+        </script>
+    </body>
+</html>

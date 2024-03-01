@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var num = +prompt("Enter a number : ");
+            var digit;
+            var temp=num;
+            var arm=num;
+            var sum=0;
+            var count=0;
+            while(num>0) {
+                digit=num%10;
+                count=count+1;
+                num=parseInt(num/10);
+            }
+            while(temp>0) {
+                digit=temp%10;
+                sum=sum+(digit**count);
+                temp=parseInt(temp/10);
+            }
+            if(arm==sum) {
+                console.log(arm+ " is an armstrong number");
+            }
+            else {
+                console.log(arm+ " is not an armstrong number");
+            }
+        </script>
+    </body>
+</html>

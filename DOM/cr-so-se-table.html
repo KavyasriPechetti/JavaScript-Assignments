@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="sortAsc()" style="margin-right: 30px">A-Z</button>
+    <button onclick="sortDsc()" style="margin-right: 30px">Z-A</button>
+
+
+    <input type="text" id="searchBox" onkeyup="search()"><br>
+    <br>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Fisrtname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>Salary</th>
+
+            </tr>
+        </thead>
+        <tbody id="d1"></tbody>
+    </table>
+
+
+    <script>
+        var tbd=document.getElementById("d1");
+        var searchBox=document.getElementById("searchBox");
+
+        var people = [
+            {
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 10000
+            },
+            {
+                "firstname": "srikanth",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "male",
+                "city": "bengaluru",
+                "salary": 20000
+            },
+            {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 25000
+            },
+            {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+                "city": "nalgonda",
+                "salary": 30000
+            },
+            {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                "city": "guntur",
+                "salary": 2000
+            },
+            {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+                "city": "indore",
+                "salary": 40000
+            }
+        ];
+             createTable(people);
+            function sortAsc() {
+                people.sort(function(a,b) {
+                    var fn1=a.firstname.toLowerCase();
+                    var fn2=b.firstname.toLowerCase();
+                    if(fn1<fn2) {
+                        return -1;
+                    } 
+                    if(fn1>fn2) {
+                        return 1;
+                    } 
+                        return 0
+                });
+                createTable(people);
+            }
+             
+            function sortDsc() {
+                people.sort(function(a,b) {
+                    var fn1=a.firstname.toLowerCase();
+                    var fn2=b.firstname.toLowerCase();
+                    if(fn1<fn2) {
+                        return 1;
+                    } 
+                    if(fn1>fn2) {
+                        return -1;
+                    } 
+                        return 0
+                });
+                createTable(people);
+            }
+
+            function search() {
+                var filteredPeople=people.filter(function(person) {
+                    return (person.firstname.toLowerCase().startsWith(searchBox.value.toLowerCase()));
+                });
+                createTable(filteredPeople);
+            }
+
+            function createTable(arr) {
+                tbd.innerHTML="";
+            arr.forEach(function(person) {
+
+            var newtr=document.createElement("tr");
+
+            var td1=document.createElement("td");
+            td1.innerHTML=person.firstname;
+            newtr.appendChild(td1);
+
+            var td2=document.createElement("td");
+            td2.innerHTML=person.lastname;
+            newtr.appendChild(td2);
+
+            var td3=document.createElement("td");
+            td3.innerHTML=person.age;
+            newtr.appendChild(td3);
+
+            var td4=document.createElement("td");
+            td4.innerHTML=person.gender;
+            newtr.appendChild(td4);
+
+            var td5=document.createElement("td");
+            td5.innerHTML=person.city;
+            newtr.appendChild(td5);
+
+            var td6=document.createElement("td");
+            td6.innerHTML=person.salary;
+            newtr.appendChild(td6);
+
+            tbd.appendChild(newtr);
+        })
+    }
+    </script>
+</body>
+
+</html>

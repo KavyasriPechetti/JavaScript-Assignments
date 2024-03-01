@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+
+        <script>
+            var j=0;
+           function  inc() {
+            var i=0;
+            function increment() {
+                i++;
+               // console.log("i::::" ,i);
+            }
+            increment();
+            //increment();    //i value becomes 1 and i++ will give 2
+           console.dir(increment);
+
+           } 
+           inc();
+          // inc();  // once a function is called, everything will come to start when function is called again
+
+          
+        </script>
+    </body>
+</html>
+<!-- inner function maintains outer function variables as closure scope
+
+Outer functions will bind its variables to inner functions under closure scope-->

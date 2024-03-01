@@ -1,0 +1,326 @@
+<html>
+
+<head></head>
+
+<body>
+    <table border="5">
+        <thead>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+
+        </thead>
+
+        <tbody id="dt">
+
+        </tbody>
+    </table>
+
+    <h2>Female people data</h2>
+
+    <table border="5">
+        <thead>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+
+        </thead>
+
+        <tbody id="dm">
+
+        </tbody>
+    </table>
+    <h2>Male people data</h2>
+    <table border="5">
+        <thead>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+
+        </thead>
+
+        <tbody id="dr">
+
+        </tbody>
+    </table>
+
+    <h2>People's data with salaries greaterthan 20000</h2>
+
+    <table border="5">
+        <thead>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+
+        </thead>
+
+        <tbody id="d1">
+
+        </tbody>
+    </table>
+
+    <h2>male with age greaterthan 25</h2>
+
+    <table border="5">
+        <thead>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+
+        </thead>
+
+        <tbody id="d2">
+
+        </tbody>
+    </table>
+
+    <script>
+        var people = [
+            {
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 10000
+            },
+            {
+                "firstname": "srikanth",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "male",
+                "city": "bengaluru",
+                "salary": 20000
+            },
+            {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 30000
+            },
+            {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+                "city": "nalgonda",
+                "salary": 30000
+            },
+            {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                "city": "guntur",
+                "salary": 2000
+            },
+            {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+                "city": "indore",
+                "salary": 40000
+            }
+        ];
+    
+    //people's data in a table
+        var x=document.getElementById("dt");
+        for(var i=0;i<=people.length-1;i++) {
+
+            var tr=document.createElement("tr");
+
+            var firsttd=document.createElement("td");
+            firsttd.innerHTML=people[i].firstname;
+            tr.appendChild(firsttd);
+
+            var lasttd=document.createElement("td");
+            lasttd.innerHTML=people[i].lastname;
+            tr.appendChild(lasttd);
+
+            var agetd=document.createElement("td");
+            agetd.innerHTML=people[i].age;
+            tr.appendChild(agetd);
+
+            var gendertd=document.createElement("td");
+            gendertd.innerHTML=people[i].gender;
+            tr.appendChild(gendertd);
+
+            var citytd=document.createElement("td");
+            citytd.innerHTML=people[i].city;
+            tr.appendChild(citytd);
+
+            var salarytd=document.createElement("td");
+            salarytd.innerHTML=people[i].salary;
+            tr.appendChild(salarytd);
+
+            x.appendChild(tr);
+
+        }
+
+    //only female data in table
+        var z=document.getElementById("dm");
+        for(var i=0;i<=people.length-1;i++) {
+
+            var tr=document.createElement("tr");
+
+            if(people[i].gender=="female") {
+
+            var firsttd=document.createElement("td");
+            firsttd.innerHTML=people[i].firstname;
+            tr.appendChild(firsttd);
+
+            var lasttd=document.createElement("td");
+            lasttd.innerHTML=people[i].lastname;
+            tr.appendChild(lasttd);
+
+            var agetd=document.createElement("td");
+            agetd.innerHTML=people[i].age;
+            tr.appendChild(agetd);
+
+            var gendertd=document.createElement("td");
+            gendertd.innerHTML=people[i].gender;
+            tr.appendChild(gendertd);
+
+            var citytd=document.createElement("td");
+            citytd.innerHTML=people[i].city;
+            tr.appendChild(citytd);
+
+            var salarytd=document.createElement("td");
+            salarytd.innerHTML=people[i].salary;
+            tr.appendChild(salarytd);
+
+            z.appendChild(tr);
+            }
+
+        }
+        
+    //only male data in a table
+        var y=document.getElementById("dr");
+        for(var i=0;i<=people.length-1;i++) {
+
+            var tr=document.createElement("tr");
+
+            if(people[i].gender=="male") {
+
+            var firsttd=document.createElement("td");
+            firsttd.innerHTML=people[i].firstname;
+            tr.appendChild(firsttd);
+
+            var lasttd=document.createElement("td");
+            lasttd.innerHTML=people[i].lastname;
+            tr.appendChild(lasttd);
+
+            var agetd=document.createElement("td");
+            agetd.innerHTML=people[i].age;
+            tr.appendChild(agetd);
+
+            var gendertd=document.createElement("td");
+            gendertd.innerHTML=people[i].gender;
+            tr.appendChild(gendertd);
+
+            var citytd=document.createElement("td");
+            citytd.innerHTML=people[i].city;
+            tr.appendChild(citytd);
+
+            var salarytd=document.createElement("td");
+            salarytd.innerHTML=people[i].salary;
+            tr.appendChild(salarytd);
+
+            y.appendChild(tr);
+            }
+         }
+
+    //table with salaries greater than 20000
+
+    var a=document.getElementById("d1");
+        for(var i=0;i<=people.length-1;i++) {
+
+            var tr=document.createElement("tr");
+
+            if(people[i].salary>"20000") {
+
+            var firsttd=document.createElement("td");
+            firsttd.innerHTML=people[i].firstname;
+            tr.appendChild(firsttd);
+
+            var lasttd=document.createElement("td");
+            lasttd.innerHTML=people[i].lastname;
+            tr.appendChild(lasttd);
+
+            var agetd=document.createElement("td");
+            agetd.innerHTML=people[i].age;
+            tr.appendChild(agetd);
+
+            var gendertd=document.createElement("td");
+            gendertd.innerHTML=people[i].gender;
+            tr.appendChild(gendertd);
+
+            var citytd=document.createElement("td");
+            citytd.innerHTML=people[i].city;
+            tr.appendChild(citytd);
+
+            var salarytd=document.createElement("td");
+            salarytd.innerHTML=people[i].salary;
+            tr.appendChild(salarytd);
+
+            a.appendChild(tr);
+            }
+         }
+
+    //male people with age > 25
+         var b=document.getElementById("d2");
+        for(var i=0;i<=people.length-1;i++) {
+
+            var tr=document.createElement("tr");
+
+            if(people[i].gender=="male" && people[i].age>25) {
+
+            var firsttd=document.createElement("td");
+            firsttd.innerHTML=people[i].firstname;
+            tr.appendChild(firsttd);
+
+            var lasttd=document.createElement("td");
+            lasttd.innerHTML=people[i].lastname;
+            tr.appendChild(lasttd);
+
+            var agetd=document.createElement("td");
+            agetd.innerHTML=people[i].age;
+            tr.appendChild(agetd);
+
+            var gendertd=document.createElement("td");
+            gendertd.innerHTML=people[i].gender;
+            tr.appendChild(gendertd);
+
+            var citytd=document.createElement("td");
+            citytd.innerHTML=people[i].city;
+            tr.appendChild(citytd);
+
+            var salarytd=document.createElement("td");
+            salarytd.innerHTML=people[i].salary;
+            tr.appendChild(salarytd);
+
+            b.appendChild(tr);
+            }
+         }
+    </script>
+</body>
+
+</html>

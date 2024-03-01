@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div onclick="abc()" id="d1" style="height: 50px; width: 50px; border: 2px solid; display:flex" ></div>
+        <script>
+
+            var x=document.getElementById("d1");
+            x.style.justifyContent="center";
+            x.style.alignItems="center";
+            var ar=["on","off"];
+            var i=0;
+            x.innerHTML=ar[i];
+            function abc() {
+                if(i==ar.length-1) {
+                    i=0;
+                    x.innerHTML=ar[i];
+                }
+                else {
+                    i++;
+                    x.innerHTML=ar[i];
+                }
+            }
+
+        </script>
+    </body>
+</html>

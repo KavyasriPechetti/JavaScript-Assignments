@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Person :</label>
+    <input type="text" id="p"><br><br>
+    <label>Age :</label>
+    <input type="text" id="a"><br><br>
+    <button onclick="addPerson()">Add Person</button>
+    <br><br>
+    <table border="1">
+        <thead>
+                <th>person</th>
+                <th>age</th>
+        </thead>
+        <tbody id="tb">
+
+        </tbody>
+    </table>
+
+    <script>
+        var pName = document.getElementById("p");
+        var pAge = document.getElementById("a");
+        var table = document.getElementById("tb");
+
+        var people = [];
+        function addPerson() {
+            table.innerHTML = " ";
+
+            var personObj = {
+                personName: pName.value,
+                personAge: pAge.value
+            }
+            people.push(personObj);
+            people.forEach(function(person) {
+                var trow = document.createElement("tr");
+
+                var td1 = document.createElement("td");
+                td1.innerHTML = person.personName;
+                trow.appendChild(td1);
+                var td2 = document.createElement("td");
+                td2.innerHTML = person.personAge;
+                trow.appendChild(td2);
+                table.appendChild(trow);
+                
+            });
+        }
+    </script>
+</body>
+
+
+</html>

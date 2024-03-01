@@ -1,0 +1,155 @@
+<html>
+
+<head></head>
+
+<body>
+    <div id="d1"></div>
+    <script>
+        // var x=100;  //x comes under global scope
+        // for(var i=0;i<=10;i++) {
+        //     console.log(x);
+        //     var x=200;
+        //           //x is being accessed in for loop             
+        // }
+        // console.log(x);
+
+
+        // console.log(x);  //hoisting-variable declarations will go up and value will not be assigned
+        // var x=200;       //so undefined
+        // //console.log(z);
+        // //console.log(y);    // variable is not declared
+
+        // var z;
+        //  if(100>3000) {
+        //     var z;
+        //  }               //at the time of reading it does not see whether it is in loop or condition
+        // console.log(z);  //undefine
+
+        // all these things are not same in functions
+        //--------------------------------------------------------------------------------------------------------------------------
+        // var p=500;              //global variable
+        // function abc() {
+        //     console.log(p);
+        //     var d=400;         //d is declared inside a function and can be accessed only inside the function
+        //     var p=600;          //local variable
+        //     console.log(p);     //undefined - variables inside function will also be hoisted upto function level
+
+        // }                          
+        // abc();          //once a function is called, all variables ,methods etcc will be dead. cannot access them again
+        // console.log(p);
+
+        //----------------------------------------------------------------------------------------------
+        // var divref=document.getElementById("d1");
+        // var ar=["kavya","maha","arshi","divya"];
+        // let k=0;
+        // for(let i=0;i<=ar.length-1;i++) {
+        //     var btn=document.createElement("button");
+        //     btn.onclick=function() {alert(ar[i])};
+        //     k++;
+        //     btn.innerHTML=ar[i];
+        //     divref.appendChild(btn);
+        // }
+        //-----------------------------------------------------------------------------------
+
+        // var x = 10;
+        // function abc() {
+        //     var y = 20;
+
+        //     console.log(x);
+        //     console.log(y);
+
+        // }
+        // abc();
+        // console.dir(abc);
+
+        //-----------------------------------------------
+
+        // var x=10;
+        // {
+        //    // abc();
+
+        //     var a=90;
+
+
+        //     function abc() {
+        //         var y=20;
+        //         console.log(a);
+        //         console.log(y);
+        //         console.log(x);
+        //     }
+        // }
+        // abc();
+        // console.dir(abc);
+        //---------------------------------------------------------------
+        //         var x=10;
+        //         {
+        //             //abc();    
+        //             var a=80;
+        //             let b=70;  //let creates block scope
+        //             function abc() {
+        //                 var y=60;
+        //                 console.log(x);
+        //                 console.log(y);
+        //                 console.log(a);
+        //                 console.log(b);
+
+        //             }
+        //         }
+        //         //console.log(b);    //cannot access b outside the block scope
+        //         abc();
+        //         console.dir(abc);
+        //-----------------------------------------------------------------------------
+        //var divi = document.getElementById("d1");
+        // var ar = ["kavya", "maha", "arshi", "sindhu"];
+        // for (var i = 0; i <= ar.length - 1; i++) {
+        //     var newbtn = document.createElement("button");
+        //     newbtn.onclick = function () {
+        //         alert(ar[i]);           //loop stops when i value is 5 and only variable declaration is binded to function
+        //         //but not the value
+
+        //     }
+
+        //     newbtn.innerHTML = ar[i];
+        //     divi.appendChild(newbtn);
+        // }
+
+
+        //var ar = ["kavya", "maha", "arshi", "sindhu"];
+        // for (let i = 0; i <= ar.length - 1; i++) {
+        //     var newbtn = document.createElement("button");
+        //     newbtn.onclick = function () {
+        //         alert(ar[i]);           //using let will bind the variable and its value also to the function
+        //     }
+
+        //     newbtn.innerHTML = ar[i];
+        //     divi.appendChild(newbtn);
+        // }
+
+        // 
+        //------------------------------------------------------------------
+
+
+        // var ar=[];
+        // var br=[10,20,30];
+        // for(var i=0;i<=br.length-1;i++) {
+        //     ar.push(function() {
+        //         alert(i);
+        //     })
+        // }
+        // console.log(ar);
+        // //console.log(ar[2]);
+        // ar[2]();
+
+        // ar[0]();
+
+        //------------------------------------------------------------------------------
+        const ar = [10, 20, 30, 40];
+        ar[1] = 14;
+        console.log(ar);
+        
+    </script>
+
+</body>
+
+</html>
+<!--  scope binding>>>outer function variable values are binded to inner function under closure scope -->

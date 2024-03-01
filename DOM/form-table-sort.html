@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aqua;">
+    <center>
+    <form name="studentForm" onsubmit="event.preventDefault()">
+        <div>
+        <label>Firstname:</label>
+        <input type="text" name="firstname" style="background-color:aqua;">
+</div><br>
+<div>
+    <label>Lastname:</label>
+    <input type="text" name="lastname" style="background-color: aqua;">
+    </div><br>
+    <div>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"><label>Male</label>
+        <input type="radio" name="gender" value="Female"><label>Female</label>
+        <input type="radio" name="gender" value="Others"><label>Others</label>
+
+   </div><br>
+    <div>
+        <label>City: </label>
+        <input type="text" name="city" style="background-color: aqua;">
+        </div>
+        <br>
+        <button onclick="save()" style="background-color: aqua;">Save</button>
+    </form>
+<br>
+    <table border="2">
+        <thead>
+            <tr>
+                <th onclick="sortStudents('firstname')">Firstname</th>
+                <th onclick="sortStudents('lastname')">Lastname</th>
+                <th onclick="sortStudents('gender')">Gender</th>
+                <th onclick="sortStudents('city')">City</th>
+
+            </tr>
+        </thead>
+        <tbody id="d1">
+
+        </tbody>
+    </table>
+</center>
+    <script>
+        var tbd=document.getElementById("d1");
+        var ar=[];
+        function save() {
+            var studentObj={
+                firstname:studentForm.firstname.value,
+                lastname:studentForm.lastname.value,
+                gender:studentForm.gender.value,
+                city:studentForm.city.value
+            }
+            ar.push(studentObj);
+            genUI(ar);
+        }
+
+        function sortStudents(k) {
+            ar.sort(function(a,b) {
+                if(a[k] > b[k]) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            })
+            genUI(ar);
+        }
+        //genUI(ar);
+
+        function genUI(arr) {
+            tbd.innerHTML="";
+            arr.forEach(function(a) {
+                var newtr=document.createElement("tr");
+
+                var td1=document.createElement("td");
+                td1.innerHTML=a.firstname;
+                newtr.appendChild(td1);
+            
+                var td2=document.createElement("td");
+                td2.innerHTML=a.lastname;
+                newtr.appendChild(td2);
+
+                var td3=document.createElement("td");
+                td3.innerHTML=a.gender;
+                newtr.appendChild(td3);
+
+                var td4=document.createElement("td");
+                td4.innerHTML=a.city;
+                newtr.appendChild(td4);
+
+                tbd.appendChild(newtr);
+            })
+        }
+    </script>
+</body>
+</html>

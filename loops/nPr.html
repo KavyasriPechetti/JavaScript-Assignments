@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var n = +prompt("Enter n value : ");
+            var r = +prompt("Enter r value : ");
+            var nfact=1;
+            var rfact=1;
+            var diffFact=1;
+            for(var i=1;i<=n;i++) {
+                nfact=nfact*i;
+            }
+            for(var i=1;i<=(n-r);i++) {
+                diffFact=diffFact*i;
+            }
+            var nPr=nfact/diffFact;
+            console.log(nPr);
+        </script>
+    </body>
+</html>

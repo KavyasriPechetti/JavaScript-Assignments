@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var marks={
+                "maths" : 34,
+                "english" : 56,
+                "science" : 32,
+                "hindi" : 75,
+                "social science" : 65
+            };
+            for(var subject in marks) {
+                if(marks[subject]>=35) {
+                    console.log("The student passed in "+subject);
+                }
+                else {
+                    console.log("The student failed in " +subject);
+                }
+            }
+            
+            
+        </script>
+    </body>
+</html>
+//can also use ternary operator
+//var result= marks[subject]>=35 ? passed : failed;

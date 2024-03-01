@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Counter :<span id="d1"></span></h1>
+        <button onclick="inc()" style="background-color: aqua;">Increment</button>
+        <button onclick="dec()" style="background-color: aqua;">Decrement</button>
+
+        <script>
+            var c=0;
+            document.getElementById("d1").innerHTML=c;
+
+            function inc() {
+                c++;
+                var x=document.getElementById("d1");
+                x.innerHTML=c;
+                
+            }
+
+            function dec() {
+                c--;
+                var y=document.getElementById("d1");
+                y.innerHTML=c;
+            }
+
+        </script>
+    </body>
+</html>

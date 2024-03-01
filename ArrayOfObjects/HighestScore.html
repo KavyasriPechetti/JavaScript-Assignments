@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var marks={
+                "maths" : 34,
+                "english" : 56,
+                "science" : 32,
+                "hindi" : 75,
+                "social science" : 65
+            };
+            var highestScored=marks["maths"];
+            for(var subject in marks) {
+                if(marks[subject]>highestScored) {
+                    highestScored = marks[subject];
+                    var res=subject;
+                }
+            } 
+            console.log(res);
+            
+        </script>
+    </body>
+</html>

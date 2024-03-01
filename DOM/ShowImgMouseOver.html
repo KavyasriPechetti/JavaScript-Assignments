@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .imga {
+            /* text-align: center; */
+            width: 200px;
+        }
+        #imgdiv {
+            width: 1pp;
+        }
+        div img {
+            width: 300px;
+            
+        }
+    
+    </style>
+</head>
+<body>
+    <img src="https://img.mensxp.com/media/content/2022/Nov/Image-2---Hungama-TV_636272e19a4e9.jpeg" alt="" onmouseover="a()" class="imga">
+    <img src="https://wallpaperaccess.com/full/1766176.jpg" alt="" onmouseover="b()" class="imga">
+    <img src="https://i0.wp.com/www.toonsmag.com/wp-content/uploads/2023/06/IMG_3575.jpeg?fit=758%2C427&ssl=1" alt="" onmouseover="c()" class="imga"><br><br>
+    <div id="imgdiv"></div>
+    <script>
+        function a() {
+            var accessimg = document.getElementById("imgdiv");
+            accessimg.innerHTML = ""
+            var x = document.createElement("img");
+            x.src = "https://img.mensxp.com/media/content/2022/Nov/Image-2---Hungama-TV_636272e19a4e9.jpeg";
+            accessimg.appendChild(x);
+        }
+
+        function b() {
+            var accessimg = document.getElementById("imgdiv");
+            accessimg.innerHTML = ""
+            var x = document.createElement("img");
+            x.src = "https://wallpaperaccess.com/full/1766176.jpg";
+            accessimg.appendChild(x);
+        }
+
+        function c() {
+            var accessimg = document.getElementById("imgdiv");
+            accessimg.innerHTML = ""
+            var x = document.createElement("img");
+            x.src = "https://i0.wp.com/www.toonsmag.com/wp-content/uploads/2023/06/IMG_3575.jpeg?fit=758%2C427&ssl=1";
+            accessimg.appendChild(x);
+        }
+    </script>
+</body>
+</html>

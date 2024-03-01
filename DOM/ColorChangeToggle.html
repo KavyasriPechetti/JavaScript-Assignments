@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <h1 style="text-align: center;">Change background color using toggle button</h1>
+       
+         <div id="d1" style="border: 2px solid; border-color: chocolate; height: 100px; width:100px; margin: auto;"></div>
+       <br>
+         <center>
+        <button onclick="abc()" style="background-color: yellow; border-color: chocolate;">Toggle</button>
+        </center>
+       <script>
+            var i=0;
+             var x=document.getElementById("d1");
+             var ar=["White","SkyBlue"];
+             var i=0;
+             x.style.backgroundColor=ar[i];
+            function abc() {
+               
+                if(i==ar.length-1) {
+                    i=0;
+                    x.style.backgroundColor=ar[i];
+                } else {
+                    i++;
+                    x.style.backgroundColor=ar[i];
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <ul id="d1">
+        
+    </ul>
+
+
+    <script>
+
+        var students = [
+            {
+                name: 'jaya',
+                gender: 'female',
+                place: 'gachibowli',
+            },
+            {
+                name: 'dasu',
+                gender: 'male',
+                place: 'kphb'
+            },
+            {
+                name: 'swati',
+                gender: 'female',
+                place: 'pune'
+            },
+            {
+                name: 'pallavi',
+                gender: 'female',
+                place: 'assam'
+            },
+            {
+                name: 'kiran',
+                gender: 'male',
+                place: 'kondapur'
+            },
+            {
+                name: 'thirumala',
+                gender: 'male',
+                place: 'madhapur'
+            },
+            {
+                name: 'priya',
+                gender: 'female',
+                place: 'hitech'
+            },
+        ]
+        var z=document.getElementById("d1");
+        for(var i=0;i<=students.length-1;i++) {
+            var x=document.createElement("li");
+            x.innerHTML=students[i].name;
+
+            if(students[i].gender=="female") {
+                x.style.backgroundColor="pink";
+            }
+            else {
+                x.style.backgroundColor="skyblue";
+            }
+
+            var y=document.createElement("ul");
+
+            var a=document.createElement("li");
+            a.innerHTML=students[i].gender;
+            var b=document.createElement("li");
+            b.innerHTML=students[i].place;
+            y.appendChild(a);
+            y.appendChild(b);
+
+            x.appendChild(y);
+            z.appendChild(x);   
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background:linear-gradient(rgb(119, 119, 231),rgb(228, 89, 228));
+        }
+      #d2 {
+        text-align: center;
+      }
+      #d1 {
+        margin-inline-start: 45%;
+       }
+       button {
+        background: linear-gradient(rgb(90, 233, 90),rgb(226, 172, 71));
+       }
+    </style>
+</head>
+
+<body>
+    <div id="d2">
+    <h1>Add Contacts</h1><br>
+    <input type="text" id="in"><br><br>
+    <button onclick="add()">Add</button>
+    </div>
+    <div id="d1"></div>
+   
+    <script>
+        var inp=document.getElementById("in");
+        var div=document.getElementById("d1");
+        function add() {
+            var ul=document.createElement("ul");
+
+            var newli=document.createElement("li");
+            newli.innerHTML=inp.value;
+            ul.appendChild(newli);
+
+            div.appendChild(ul);
+        }
+ 
+        
+    </script>
+</body>
+
+</html>

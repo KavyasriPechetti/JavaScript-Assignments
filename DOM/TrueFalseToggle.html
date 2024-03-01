@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <h1 style="text-align: center; color: palevioletred;">Toggle button to show true/false</h1>
+        <center>
+            <button onclick="abc()" style="background-color: yellow;">Toggle</button> <span id="d2"></span>
+        </center>
+        <script>  
+            var x=document.getElementById("d2");
+            var y=false;
+            x.innerHTML=y;
+           
+            function abc() {
+                y=!y
+                x.innerHTML=y;
+                //x.innerHTML=!y;
+                // if(x.innerHTML=="False") {
+                //     x.innerHTML="True";
+                // } else {
+                //     x.innerHTML="False";
+                // }
+            }
+
+
+
+            // var x = false;
+
+            // x = !x;
+            // console.log(x)
+        </script>
+    </body>
+</html>

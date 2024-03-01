@@ -1,0 +1,83 @@
+<html>
+    <head></head>
+    <body>
+        <h1>This is h1 element</h1>
+        
+        <div id="d1"></div>
+
+        <br>
+
+        <table border="3">  
+            <thead>
+                <th>Full Name</th>
+                <th>Place</th>
+                <th>Gender</th>
+            </thead>
+            <tbody id="dm">
+
+            </tbody>
+        </table>
+
+        <script>
+
+        //creating h2 element
+           var x=document.createElement("h2");
+            x.innerHTML="This is h2 tag";
+            document.body.appendChild(x);
+            console.log(x.innerHTML);
+            console.log(x); 
+        
+        //creating list
+            var students=["kavya","sai","mani","maha"];
+            for(var i=0;i<=students.length-1;i++) {
+                var list=document.createElement("li");
+                list.innerHTML=students[i];
+                console.log(list.innerHTML);
+                document.getElementById("d1").appendChild(list);
+            } 
+
+        //create table-array of objects
+            var emp =[
+               {
+                fullname:"Kavya",
+                place:"amp",
+                gender:"female"
+               },
+               {
+                fullname:"Subbu",
+                place:"kkd",
+                gender:"female"
+               },
+               {
+                fullname:"Sai",
+                place:"mkp",
+                gender:"male"
+               }
+            ]
+
+            for(var i=0;i<=emp.length-1;i++) {
+                //console.log(emp[i]);
+            //creating row
+                var tr=document.createElement("tr");
+
+                var fullnametd=document.createElement("td");
+                fullnametd.innerHTML=emp[i].fullname;
+                tr.appendChild(fullnametd);
+
+                var placetd=document.createElement("td");
+                placetd.innerHTML=emp[i].place;
+                tr.appendChild(placetd);
+
+                var gendertd=document.createElement("td");
+                gendertd.innerHTML=emp[i].gender;
+                tr.appendChild(gendertd);
+
+                document.getElementById("dm").appendChild(tr);
+
+                console.log(tr);
+            }
+
+             
+        </script>
+    </body>
+</html>

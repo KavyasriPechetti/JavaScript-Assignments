@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ar=[14,15,10,87,2];
+
+        // var x=ar.reduce(function() {}) // there are two reduce 
+        // //methods in which one reduce has one argument and other has two arguments 
+        // var x=ar.map(function() {});    //one argument
+        // var x=ar.filter(function() {}); //one argument
+        // var x=ar.forEach(function() {}); //one argument
+
+
+        var x=ar.reduce(function(a,b) {
+            console.log(a,b);
+            return a+b;
+        },0); 
+        console.log(x);
+        
+        //2 arguments-call back function and initial value
+        //call back function has 2 arguments-a and b
+        //a has value 8 and b has value 14(first index value)
+        
+        var y=ar.reduce(function(a,b) {
+            console.log(a,b);
+            return a+b;
+        })
+        console.log(y);   //one argument-call back function
+    </script>
+</body>
+</html>
